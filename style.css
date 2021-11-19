@@ -227,9 +227,47 @@ body {
     grid-area: footer;
     background-color: var(--yellow);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-end;
-    border-radius: 0px 80px 0px 0px;
+    border-radius: 0px 60px 0px 0px;
+    animation-name: footer;
+    animation-duration: 1.3s;
+    animation-delay: 2.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform: translateY(100%);
+    position: relative;
+}
+
+@keyframes footer {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.footer div {
+    background-color: var(--blue);
+    width: 130px;
+    height: 50%;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+}
+.footer div:hover img {
+    transform: translateY(-20px) scale(1.4) ;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.footer div img {
+    width: 150px;
+    position: absolute;
+    bottom: 30px;
+
+    transform: translateY(0px) scale(1);
+    transition: all 0.5s ease-in-out;
 }
 
 

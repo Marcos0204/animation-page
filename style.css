@@ -309,7 +309,7 @@ body {
 
 /* modal */
 .hidden {
-    display: none;
+    display: none !important;
 }
 .visible{
     display: grid;
@@ -320,5 +320,12 @@ body {
     position: absolute;
     z-index: 4;
     background-color: rgba(0,0,0,0.5);
+    display: grid;
+    place-items: center;
     
+}
+.modal-container{
+    background-color: white;
+    width: 50%;
+    height: 50%;
 }

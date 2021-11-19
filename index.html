@@ -35,8 +35,8 @@
             <div></div>
             <section class="footer">
                 <div id='button1'><img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="image footer"></div>
-                <div><img src="https://i.ibb.co/Xzsdvgg/robin.png" alt=""></div>
-                <div><img src="https://i.ibb.co/M18p91c/batman.webp" alt=""></div>
+                <div id='button1'><img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="image footer"></div>
+                <div id='button1'><img src="https://i.ibb.co/M18p91c/batman.webp" alt="image footer"></div>
             </section>
         </section>
 
@@ -48,11 +48,26 @@
         </section>
         <!-- Modal -->
         <section class="modal hidden">
-
+            <div class="modal-container">
+                <img class="modal-container__close" src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-close-banking-and-finance-kiranshastry-gradient-kiranshastry.png"/>               
+            </div>
         </section>
     </div>
 </body>
 <script>
+    const modal = document.querySelector('.modal')
+    const closeButton= document.querySelector('.modal-container__close')
     const button1 = document.querySelector('#button1')
+    button1.addEventListener('click', () =>{
+        console.log('click')
+        modal.classList.remove('hidden')
+        modal.classList.add('visible')
+    });
+
+    closeButton.addEventListener('click', () =>{
+        console.log('cierrate')
+        modal.classList.add('hidden')
+        modal.classList.remove('visible')
+    })
 </script>
 </html>

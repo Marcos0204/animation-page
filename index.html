@@ -34,9 +34,9 @@
             </section>
             <div></div>
             <section class="footer">
-                <div><img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="image footer"></div>
-                <div><img src="https://i.ibb.co/Xzsdvgg/robin.png" alt=""></div>
-                <div><img src="https://i.ibb.co/M18p91c/batman.webp" alt=""></div>
+                <div id='button1'><img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="image footer"></div>
+                <div id='button1'><img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="image footer"></div>
+                <div id='button1'><img src="https://i.ibb.co/M18p91c/batman.webp" alt="image footer"></div>
             </section>
         </section>
 
@@ -47,9 +47,43 @@
             <div></div>
         </section>
         <!-- Modal -->
-        <section>
-
-        </section>
+        <!-- <section class="modal hidden">
+            <div class="modal-container">
+                <img class="modal-container__close" src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/50/000000/external-close-banking-and-finance-kiranshastry-gradient-kiranshastry.png"/>
+                <div class="modal-container--slider">
+                    <input type="radio" name='slider1' id='radio-1' checked>
+                    <input type="radio" name='slider2' id='radio-2'>
+                    <input type="radio" name='slider3' id='radio-3'>
+                    <div class="cards">
+                        <label for="radio-1" id='card-1' class="card">
+                            <img src="" alt="">
+                        </label>
+                        <label for="radio-2" id='card-2' class="card">
+                            <img src="" alt="">
+                        </label>
+                        <label for="radio-3" id='card-3' class="card">
+                            <img src="" alt="">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section> -->
     </div>
 </body>
+<script>
+    const modal = document.querySelector('.modal')
+    const closeButton= document.querySelector('.modal-container__close')
+    const button1 = document.querySelector('#button1')
+    button1.addEventListener('click', () =>{
+        console.log('click')
+        modal.classList.remove('hidden')
+        modal.classList.add('visible')
+    });
+
+    closeButton.addEventListener('click', () =>{
+        console.log('cierrate')
+        modal.classList.add('hidden')
+        modal.classList.remove('visible')
+    })
+</script>
 </html>
